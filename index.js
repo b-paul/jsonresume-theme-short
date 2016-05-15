@@ -11,7 +11,7 @@ function render(resume) {
 	Handlebars.registerHelper('date', function(date) {
 	  var theDate = new Date(date);
 
-	  return months[theDate.getMonth()] + ' ' + theDate.getFullYear();
+	  return months[theDate.getMonth() + 1] + ' ' + theDate.getFullYear();
 	});
 
 	return Handlebars.compile(template)({
